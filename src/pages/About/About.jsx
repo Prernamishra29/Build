@@ -31,7 +31,7 @@ const StatsSection = () => {
     { icon: <Target size={20} />, value: "1+", label: "Years Research Experience" },
     { icon: <BookOpen size={20} />, value: "2+", label: "Research Projects" },
     { icon: <Award size={20} />, value: "2+", label: "Publications" },
-    { icon: <Target size={20} />, value: "2", label: "Current Projects" }
+    // { icon: <Target size={20} />, value: "2", label: "Current Projects" }
   ];
 
   return (

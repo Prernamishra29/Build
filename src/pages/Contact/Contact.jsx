@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Send, Phone, MapPin, Mail, MessageCircle } from "lucide-react";
+import { Send, Phone, MapPin, Mail, MessageCircle, Linkedin, Github, Twitter, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -92,7 +92,7 @@ export default function Contact() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,14 +102,14 @@ export default function Contact() {
               Let's Connect
             </h2>
             <p className="text-emerald-700 max-w-2xl mx-auto text-lg">
-              Have a question or want to work together? I'd love to hear from you. 
+              Have a question or want to work together? I'd love to hear from you.
               Send me a message and I'll respond as soon as possible.
             </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Info */}
-            <motion.div 
+            <motion.div
               className="space-y-8"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -117,7 +117,7 @@ export default function Contact() {
             >
               <div className="bg-white p-8 rounded-2xl shadow-lg border border-emerald-100">
                 <h3 className="text-2xl font-bold text-emerald-800 mb-6">Get in Touch</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-emerald-100 p-3 rounded-lg">
@@ -150,14 +150,57 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Decorative Elements */}
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-emerald-200 rounded-full -translate-x-16 translate-y-16 opacity-20"></div>
+                {/* Social Media Links */}
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold text-emerald-800 mb-4">Connect with me</h4>
+                  <div className="flex space-x-4">
+                    <motion.a
+                      href="https://www.linkedin.com/in/prateek-singh-8956521ba"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-emerald-100 p-3 rounded-lg hover:bg-emerald-200 transition"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      <Linkedin className="w-6 h-6 text-emerald-700" />
+                    </motion.a>
+                    {/* <motion.a
+                      href="https://github.com/yourusername"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-emerald-100 p-3 rounded-lg hover:bg-emerald-200 transition"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      <Github className="w-6 h-6 text-emerald-700" />
+                    </motion.a> */}
+                   <motion.a
+  href="mailto:prateek.biot@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-emerald-100 p-3 rounded-lg hover:bg-emerald-200 transition"
+  whileHover={{ scale: 1.1 }}
+>
+  <Mail className="w-6 h-6 text-emerald-700" />
+</motion.a>
+
+                    <motion.a
+                      href="https://build-lime-six.vercel.app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-emerald-100 p-3 rounded-lg hover:bg-emerald-200 transition"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      <Globe className="w-6 h-6 text-emerald-700" />
+                    </motion.a>
+                  </div>
+                </div>
               </div>
 
               {/* Additional Info Card */}
               <div className="bg-emerald-800 text-white p-6 rounded-2xl shadow-lg">
                 <h3 className="text-xl font-bold mb-4">Let's Collaborate</h3>
-                <p className="mb-4">I'm interested in freelance opportunities, especially ambitious projects. However, if you have other requests or questions, don't hesitate to reach out.</p>
+                <p className="mb-4">
+                  I'm interested in freelance opportunities, especially ambitious projects. However, if you have other requests or questions, don't hesitate to reach out.
+                </p>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-emerald-300 rounded-full mr-2"></div>
                   <span>Available for freelance work</span>
@@ -166,14 +209,14 @@ export default function Contact() {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div 
+            <motion.div
               className="bg-white p-8 rounded-2xl shadow-xl border border-emerald-100"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <h3 className="text-2xl font-bold text-emerald-800 mb-6">Send a Message</h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6">
                   <div>

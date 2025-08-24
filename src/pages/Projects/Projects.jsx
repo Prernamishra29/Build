@@ -3,10 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Award,
   Calendar,
-  BookOpen,
   ExternalLink,
-  ChevronRight,
-  ChevronLeft,
+  BookOpen,
   MapPin
 } from "lucide-react";
 
@@ -21,7 +19,18 @@ const CertificatesSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.8]);
 
+  // Certificates Data
   const certificatesData = [
+    {
+  title: "Clinical Trial Analysis & Reporting",
+  issuer: "Internshala Trainings",
+  id: "4alsei6xsyy",
+  date: "2024",
+  description: "Comprehensive training on clinical trial data analysis and reporting using SAS, covering regulatory standards, data handling, and result interpretation.",
+  skills: ["SAS (Programming Language)", "Clinical Trial Analysis", "Data Reporting"],
+  link: "https://www.linkedin.com/in/prateek-singh-8956521ba/details/certifications/1722934054321/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8"
+},
+
     {
       title: "Molecular Docking",
       issuer: "Biogrademy",
@@ -29,23 +38,25 @@ const CertificatesSection = () => {
       date: "2024",
       description: "Advanced course on molecular docking techniques and applications in drug discovery.",
       skills: ["Bioinformatics", "Molecular Modeling", "Drug Design", "Protein-Ligand Interactions"],
-      link: "#"
+      link: "https://www.linkedin.com/in/prateek-singh-8956521ba/details/certifications/1712681711488/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8"
     },
+    
     {
-      title: "Python - Introduction to Data Science and Machine Learning A-Z",
+      title: "Data Science & ML A-Z",
       issuer: "Udemy",
       id: "UC2c30fcb7-dc64-4bb1-8334-c6a320abd6b5",
       date: "2023",
       description: "Comprehensive course covering data science fundamentals and machine learning algorithms with Python.",
       skills: ["Python", "Data Analysis", "Machine Learning", "Data Visualization"],
-      link: "#"
+      link: "https://www.linkedin.com/in/prateek-singh-8956521ba/details/certifications/1712731297446/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8"
     }
   ];
 
+  // Training & Workshops Data
   const trainingData = [
     {
-      title: "SILVER JUBILEE, 25th INDO-US Flow cytometry Workshop",
-      organizer: "TETC, India and Department of Biotechnology and Department of Pharmaceutical Sciences, BBAU",
+      title: "SILVER JUBILEE, 25th INDO-US Flow Cytometry Workshop",
+      organizer: "TETC, India & Dept. of Biotechnology, BBAU",
       location: "BBAU, Lucknow, India",
       date: "3rd & 4th February, 2024",
       description: "Workshop on 'Flow Cytometry and its Applications in Biology' covering advanced techniques and applications in biological research.",
@@ -54,24 +65,54 @@ const CertificatesSection = () => {
     }
   ];
 
+  // Publications Data
+  const publicationsData = [
+  {
+    title: "Development and Characterization of Chicken Rabies Immunoglobulin",
+    publisher: "International Journal of Advanced Biochemistry Research",
+    date: "July 21, 2025",
+    description:
+      "Published a research paper focusing on the development and characterization of chicken-derived rabies immunoglobulin for improved therapeutic applications.",
+    skills: ["Biochemistry", "Immunology", "Antibody Development", "Therapeutics"],
+    link: "https://www.biochemjournal.com/archives/2025/vol9issue7S/PartJ/S-9-7-89-527.pdf"
+  },
+  {
+    title:
+      "GenoVisor: A Feature-Rich DNA to Protein Converter Enhanced with ExPASy ProtParam Integration",
+    publisher:
+      "International Journal of All Research Education and Scientific Methods",
+    date: "March 11, 2024",
+    description:
+      "Published a paper introducing GenoVisor, a tool for DNA-to-protein conversion with integrated ExPASy ProtParam features for advanced bioinformatics analysis.",
+    skills: ["Bioinformatics", "DNA Analysis", "Protein Modeling", "Tool Development"],
+    link: "https://www.ijaresm.com/uploaded_files/document_file/Himanshu_Guptao5Ti.pdf" 
+  }
+];
+
   const Card = ({ item, type }) => (
-    <motion.div 
+    <motion.div
       className="bg-white rounded-2xl p-6 shadow-lg border border-emerald-100 h-full flex flex-col"
       whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(72, 187, 120, 0.15)" }}
       transition={{ duration: 0.3 }}
     >
       <div className="flex items-start justify-between mb-4">
         <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-700">
-          <Award size={24} />
+          {type === "publication" ? <BookOpen size={24} /> : <Award size={24} />}
         </div>
         <span className="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-medium rounded-full">
-          {type === "certificate" ? "Certificate" : "Workshop"}
+          {type === "certificate"
+            ? "Certificate"
+            : type === "training"
+            ? "Workshop"
+            : "Publication"}
         </span>
       </div>
-      
+
       <h3 className="text-xl font-bold text-emerald-900 mb-2">{item.title}</h3>
-      <p className="text-emerald-700 mb-4">{item.issuer || item.organizer}</p>
-      
+      <p className="text-emerald-700 mb-4">
+        {item.issuer || item.organizer || item.publisher}
+      </p>
+
       <div className="flex items-center gap-3 text-sm text-emerald-600 mb-4">
         <Calendar size={16} />
         <span>{item.date}</span>
@@ -82,52 +123,49 @@ const CertificatesSection = () => {
           </>
         )}
       </div>
-      
+
       <p className="text-emerald-700 mb-4 flex-grow">{item.description}</p>
-      
+
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-emerald-800 mb-2">Skills Covered</h4>
         <div className="flex flex-wrap gap-2">
           {item.skills.map((skill, index) => (
-            <span key={index} className="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs rounded-full">
+            <span
+              key={index}
+              className="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs rounded-full"
+            >
               {skill}
             </span>
           ))}
         </div>
-      </div>
-      
-      <div className="mt-auto pt-4 border-t border-emerald-100 flex justify-between items-center">
+         <div className="mt-auto pt-4 border-t border-emerald-100 flex justify-between items-center">
         <span className="text-xs font-mono text-emerald-600">ID: {item.id || "N/A"}</span>
-        {/* <motion.a 
+        <motion.a 
           href={item.link} 
           className="flex items-center text-emerald-600 hover:text-emerald-800 font-medium text-sm"
           whileHover={{ x: 4 }}
         >
           View Details <ExternalLink size={16} className="ml-1" />
-        </motion.a> */}
+        </motion.a>
+      </div>
       </div>
     </motion.div>
   );
 
   return (
-    <section ref={containerRef} className="relative py-20 bg-gradient-to-br from-white to-emerald-50 overflow-hidden">
+    <section
+      ref={containerRef}
+      className="relative py-20 bg-gradient-to-br from-white to-emerald-50 overflow-hidden"
+    >
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-emerald-100 rounded-full -translate-x-40 -translate-y-40 opacity-50"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-200 rounded-full translate-x-40 translate-y-40 opacity-30"></div>
-      
-      {/* Subtle grid pattern */}
       <div className="absolute inset-0 bg-grid-emerald-900/[0.02] bg-[length:50px_50px]" />
-      
+
       <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <motion.div 
-          className="text-center mb-16"
-          style={{ opacity, scale }}
-        >
-          {/* <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-6">
-            Certifications & Training
-          </h2> */}
+        <motion.div className="text-center mb-16" style={{ opacity, scale }}>
           <p className="text-emerald-700 max-w-2xl mx-auto text-lg">
-            Continuous learning through specialized courses and workshops to enhance my expertise in biotechnology.
+            Continuous learning through specialized courses, workshops, and publications to enhance my expertise.
           </p>
         </motion.div>
 
@@ -154,29 +192,47 @@ const CertificatesSection = () => {
             >
               Training & Workshops
             </button>
+            <button
+              onClick={() => setActiveTab("publications")}
+              className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
+                activeTab === "publications"
+                  ? "bg-white text-emerald-800 shadow-md"
+                  : "text-emerald-600 hover:text-emerald-800"
+              }`}
+            >
+              Publications
+            </button>
           </div>
         </div>
 
-        {/* Content */}
-        {activeTab === "certificates" && (
-          <motion.div 
+       {/* Certificates */}
+{activeTab === "certificates" && (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="flex gap-6 overflow-x-auto pb-4"
+    style={{ scrollSnapType: "x mandatory" }}
+  >
+    {certificatesData.map((cert, index) => (
+      <div
+        key={index}
+        className="min-w-[350px] scroll-snap-align-start"
+      >
+        <Card item={cert} type="certificate" />
+      </div>
+    ))}
+  </motion.div>
+)}
+
+
+        {/* Training */}
+        {activeTab === "training" && (
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {certificatesData.map((cert, index) => (
-              <Card key={index} item={cert} type="certificate" />
-            ))}
-          </motion.div>
-        )}
-
-        {activeTab === "training" && (
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 gap-8"
           >
             {trainingData.map((training, index) => (
               <Card key={index} item={training} type="training" />
@@ -184,17 +240,19 @@ const CertificatesSection = () => {
           </motion.div>
         )}
 
-        {/* Floating decorative elements */}
-        <motion.div 
-          className="absolute left-10 top-1/3 w-8 h-8 bg-emerald-200 rounded-full opacity-50"
-          animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
-        <motion.div 
-          className="absolute right-20 bottom-1/4 w-6 h-6 bg-emerald-300 rounded-full opacity-30"
-          animate={{ y: [0, 15, 0] }}
-          transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
-        />
+        {/* Publications */}
+        {activeTab === "publications" && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {publicationsData.map((pub, index) => (
+              <Card key={index} item={pub} type="publication" />
+            ))}
+          </motion.div>
+        )}
       </div>
     </section>
   );
