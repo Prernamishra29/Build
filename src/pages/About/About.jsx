@@ -59,12 +59,11 @@ const StatsSection = () => {
 // Research interests component
 const ResearchInterests = () => {
   const interests = [
-    "Molecular Virology",
+    "Molecular Biology",
+    "Virology",
     "Host-Pathogen Interactions",
     "Immunology",
     "Bioinformatics",
-    "Microbial Genomics",
-    "Drug Discovery"
   ];
 
   return (

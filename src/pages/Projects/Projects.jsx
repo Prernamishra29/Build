@@ -21,15 +21,6 @@ const CertificatesSection = () => {
 
   // Certificates Data
   const certificatesData = [
-    {
-  title: "Clinical Trial Analysis & Reporting",
-  issuer: "Internshala Trainings",
-  id: "4alsei6xsyy",
-  date: "2024",
-  description: "Comprehensive training on clinical trial data analysis and reporting using SAS, covering regulatory standards, data handling, and result interpretation.",
-  skills: ["SAS (Programming Language)", "Clinical Trial Analysis", "Data Reporting"],
-  link: "https://www.linkedin.com/in/prateek-singh-8956521ba/details/certifications/1722934054321/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8"
-},
 
     {
       title: "Molecular Docking",
@@ -48,22 +39,42 @@ const CertificatesSection = () => {
       date: "2023",
       description: "Comprehensive course covering data science fundamentals and machine learning algorithms with Python.",
       skills: ["Python", "Data Analysis", "Machine Learning", "Data Visualization"],
-      link: "https://www.linkedin.com/in/prateek-singh-8956521ba/details/certifications/1712731297446/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8"
+      link: "https://www.udemy.com/certificate/UC-2c30fcb7-dc64-4bb1-8334-c6a320abd6b5"
     }
   ];
 
   // Training & Workshops Data
-  const trainingData = [
-    {
-      title: "SILVER JUBILEE, 25th INDO-US Flow Cytometry Workshop",
-      organizer: "TETC, India & Dept. of Biotechnology, BBAU",
-      location: "BBAU, Lucknow, India",
-      date: "3rd & 4th February, 2024",
-      description: "Workshop on 'Flow Cytometry and its Applications in Biology' covering advanced techniques and applications in biological research.",
-      skills: ["Flow Cytometry", "Cell Analysis", "Laboratory Techniques", "Data Interpretation"],
-      link: "#"
-    }
-  ];
+const trainingData = [
+  {
+    title: "Clinical Trial Analysis & Reporting",
+    organizer: "Internshala Trainings",
+    id: "4alsei6xsyy",
+    date: "2024",
+    duration: "1 Month",
+    description: "Comprehensive 1-month training on clinical trial data analysis and reporting using SAS, covering regulatory standards, data handling, and result interpretation.",
+    skills: ["SAS (Programming Language)", "Clinical Trial Analysis", "Data Reporting"],
+    link: "https://www.linkedin.com/in/prateek-singh-8956521ba/details/certifications/1722934054321/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8"
+  },
+  {
+    title: "Is it somehow possible to improve human personality through genetics?",
+    organizer: "Department of Biotechnology, Invertis University, Bareilly",
+    location: "Invertis University, Bareilly, India",
+    date: "Oct 2019",
+    description: "Presented a poster at the 6th International Conference, GenoPro-2019, on 'Translational Approaches in Clinical, Environmental, and Biotechnological Research'.",
+    skills: ["Genetics", "Biotechnology Research", "Scientific Presentation", "Clinical & Environmental Studies"],
+    link: "https://www.linkedin.com/in/prateek-singh-8956521ba/overlay/1712861999561/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8"
+  },
+  {
+    title: "SILVER JUBILEE, 25th INDO-US Flow Cytometry Workshop",
+    organizer: "TETC, India & Dept. of Biotechnology, BBAU",
+    location: "BBAU, Lucknow, India",
+    date: "3rd & 4th February, 2024",
+    description: "Workshop on 'Flow Cytometry and its Applications in Biology' covering advanced techniques and applications in biological research.",
+    skills: ["Flow Cytometry", "Cell Analysis", "Laboratory Techniques", "Data Interpretation"],
+    link: "#"
+  }
+];
+
 
   // Publications Data
   const publicationsData = [
@@ -226,19 +237,20 @@ const CertificatesSection = () => {
 )}
 
 
-        {/* Training */}
-        {activeTab === "training" && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {trainingData.map((training, index) => (
-              <Card key={index} item={training} type="training" />
-            ))}
-          </motion.div>
-        )}
+      {/* Training */}
+{activeTab === "training" && (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+  >
+    {trainingData.map((training, index) => (
+      <Card key={index} item={training} type="training" />
+    ))}
+  </motion.div>
+)}
+
 
         {/* Publications */}
         {activeTab === "publications" && (

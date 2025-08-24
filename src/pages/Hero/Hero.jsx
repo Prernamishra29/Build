@@ -233,8 +233,7 @@ export default function Hero() {
                 className="mb-8 max-w-xl mx-auto lg:mx-0"
               >
                 <p className="text-lg text-emerald-700 leading-relaxed">
-                  Biotechnology researcher 🔬 | Virology enthusiast 🧬 | Passionate
-                  about unraveling molecular host-pathogen interactions and contributing
+     Passionate about unraveling molecular host-pathogen interactions and contributing
                   to impactful research innovations.
                 </p>
               </motion.div>

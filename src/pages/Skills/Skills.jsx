@@ -149,7 +149,7 @@ const SkillsSection = () => {
     },
     {
       icon: Brain,
-      title: "Virology & Microscopy",
+      title: "Cell Culture & Microscopy",
       skills: [
         { name: "Virus Isolation", icon: <GiMicroscopeLens className="w-4 h-4 text-blue-400" /> },
         { name: "Confocal Microscopy", icon: <Microscope className="w-4 h-4 text-orange-400" /> },
@@ -159,13 +159,13 @@ const SkillsSection = () => {
     },
     {
       icon: Brain,
-      title: "Bioinformatics & Data Science",
+      title: "Bioinformatics & Data Analysis",
       skills: [
         { name: "Python", icon: <FaPython className="w-4 h-4 text-[#3776AB]" /> },
-        { name: "R Programming", icon: <FaRProject className="w-4 h-4 text-[#276DC3]" /> },
-        { name: "Jupyter Notebook", icon: <SiJupyter className="w-4 h-4 text-[#f97316]" /> },
-        { name: "Pandas", icon: <SiPandas className="w-4 h-4 text-[#22d3ee]" /> },
-        { name: "NumPy", icon: <SiNumpy className="w-4 h-4 text-[#0ea5e9]" /> },
+        // { name: "R Programming", icon: <FaRProject className="w-4 h-4 text-[#276DC3]" /> },
+        // { name: "Jupyter Notebook", icon: <SiJupyter className="w-4 h-4 text-[#f97316]" /> },
+        // { name: "Pandas", icon: <SiPandas className="w-4 h-4 text-[#22d3ee]" /> },
+        // { name: "NumPy", icon: <SiNumpy className="w-4 h-4 text-[#0ea5e9]" /> },
         { name: "Bioinformatics Tools", icon: <BiChip className="w-4 h-4 text-[#ec4899]" /> },
       ],
     },
