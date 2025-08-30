@@ -7,6 +7,7 @@ import Header from "./pages/Header/Header";
 import Hero from "./pages/Hero/Hero";
 import Skills from "./pages/Skills/Skills";
 import Education from "./pages/Education/Education";
+import Footer from "./pages/Footer/Footer"; // Make sure the path is correct
 
 import { Route, Routes } from "react-router-dom";
 
@@ -24,18 +25,23 @@ export default function App() {
           <Skills />
           <Experience />
           <Education />
+          <Projects />
           <Contact />
+          <Footer /> {/* Footer added to one-page mode */}
         </>
       ) : (
         // Router Mode: Use routes for navigation
-        <Routes>`
-          <Route path="/" element={<Hero />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+        <>
+          <Routes>
+            <Route path="/" element={<Hero />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+          <Footer /> {/* Footer added to router mode */}
+        </>
       )}
     </>
   );

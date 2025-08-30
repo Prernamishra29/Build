@@ -222,8 +222,8 @@ const trainingData = [
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="flex gap-6 overflow-x-auto pb-4"
-    style={{ scrollSnapType: "x mandatory" }}
+    className="grid grid-cols-1 md:grid-cols-2 gap-8"
+ 
   >
     {certificatesData.map((cert, index) => (
       <div

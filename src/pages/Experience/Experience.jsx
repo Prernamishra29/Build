@@ -69,12 +69,12 @@ const ExperienceCard = ({
             ))}
           </ul>
           
-          <div className="mt-6 pt-4 border-t border-dashed border-emerald-100">
+          {/* <div className="mt-6 pt-4 border-t border-dashed border-emerald-100">
             <button className="flex items-center text-emerald-600 font-medium text-sm hover:text-emerald-700 transition-colors duration-300 group">
               View full project details
               <ExternalLink size={16} className="ml-1.5 group-hover:translate-x-0.5 transition-transform duration-300" />
             </button>
-          </div>
+          </div> */}
         </div>
       )}
 
@@ -109,18 +109,20 @@ const ExperienceSection = () => {
       ]
     },
     {
-      icon: Beaker,
-      title: "Research Trainee",
-      company: "Babasaheb Bhimrao Ambedkar University (BBAU), Lucknow",
-      period: "Feb 2024 - Jul 2024",
-      description: "Completed a dissertation project focused on cell culture techniques and confocal microscopy applications in biotechnology research.",
-      bullets: [
-        "Worked on cell culture handling and maintenance techniques",
-        "Performed confocal microscopy for cellular imaging and analysis",
-        "Studied experimental methodologies related to biotechnology",
-        "Developed skills in data collection and result interpretation"
-      ]
-    }
+  icon: Beaker,
+  title: "Research Trainee",
+  company: "Babasaheb Bhimrao Ambedkar University (BBAU), Lucknow",
+  period: "Feb 2024 - Jul 2024",
+  description: "Worked on exploring the anti-apoptotic effects of hcmv-miR-UL70-3p in A549 cells, gaining hands-on experience in advanced molecular biology techniques and cell-based assays.",
+  bullets: [
+    "Project: Exploring the Anti-apoptotic Effects of hcmv-miR-UL70-3p in A549 Cells",
+    "Under the supervision of: Dr. Sunil Babu Gosipatala, Associate Professor, Department of Biotechnology, BBAU, Lucknow",
+    "Hands-on experience in cell culture handling, maintenance, and transfection techniques",
+    "Performed confocal microscopy for cellular imaging and apoptosis analysis",
+    "Developed skills in experimental design, data collection, and result interpretation"
+  ]
+}
+
   ];
 
   return (
@@ -135,6 +137,9 @@ const ExperienceSection = () => {
 
       <div className="relative container mx-auto max-w-4xl">
         <div className="flex flex-col items-center space-y-4 mb-16 text-center">
+          <h3 className="text-4xl md:text-5xl font-extrabold text-gray-800 animate-fadeIn">
+          
+          </h3>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
             Exploring the intersection of biotechnology and innovation through impactful research
           </p>
