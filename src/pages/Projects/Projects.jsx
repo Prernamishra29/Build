@@ -52,17 +52,19 @@ const CertificatesSection = () => {
       type: "training"
     },
     {
-      title: "Exploring the Anti-apoptotic effects of hcmv-miR-UL70-3p in A549 cells",
-      organizer: "Babasaheb Bhimrao Ambedkar University (BBAU), Lucknow",
-      supervisor: "Dr. Sunil Babu Gosipatala, Associate Professor, Dept. of Biotechnology, BBAU, Lucknow",
-      id: "Poster2024",
-      date: "Feb 2024 - Jul 2024",
-      description:
-        "Presented a poster on the anti-apoptotic effects of hcmv-miR-UL70-3p in A549 cells at the 6th International Conference, GenoPro-2019.",
-      skills: ["Cell Biology", "Molecular Biology", "Scientific Presentation"],
-      link: "https://www.linkedin.com/in/prateek-singh-8956521ba/overlay/1712861999561/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8",
-      type: "poster"
-    },
+   
+  title: "Is it somehow possible to improve human personality through genetics?",
+  organizer: "Department of Biotechnology, Invertis University, Bareilly",
+  supervisor: "Associated with Invertis University",
+  id: "Poster2019",
+  date: "Oct 2019",
+  description:
+    "Presented a poster at the 6th International Conference, GenoPro-2019, on 'Translational Approaches in Clinical, Environmental, and Biotechnological Research'.",
+  skills: ["Genetics", "Biotechnology Research", "Scientific Presentation", "Clinical & Environmental Studies"],
+  link: "https://www.linkedin.com/in/prateek-singh-8956521ba/overlay/1712861999561/single-media-viewer/?profileId=ACoAADL_T3EB5PecjplaRDVVi3iEiJPzj05Qxh8",
+  type: "poster"
+},
+
     {
       title: "SILVER JUBILEE, 25th INDO-US Flow Cytometry Workshop",
       organizer: "TETC, India & Dept. of Biotechnology, BBAU",
