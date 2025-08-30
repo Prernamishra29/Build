@@ -7,7 +7,7 @@ import Header from "./pages/Header/Header";
 import Hero from "./pages/Hero/Hero";
 import Skills from "./pages/Skills/Skills";
 import Education from "./pages/Education/Education";
-import Footer from "./pages/Footer/Footer"; // Make sure the path is correct
+import Footer from "./pages/Footer/Footer";
 
 import { Route, Routes } from "react-router-dom";
 
