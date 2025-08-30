@@ -103,7 +103,7 @@ const ExperienceSection = () => {
       description: "Working on the development of recombinant vaccine candidates for avian diseases with a focus on innovative biotechnology solutions.",
       bullets: [
         "Project: Development of Recombinant Fowlpox Virus Vector Based Avian Infectious Laryngotracheitis (ILT) Vaccine Candidate",
-        "PI: Dr. Vikramaditya Upmanyu, Senior Scientist, Division of Biological Standardization, ICAR-IVRI, Bareilly",
+        "PI: Dr. Vikramaditya Upmanyu, Principal Scientist, Division of Biological Standardization, ICAR-IVRI, Bareilly",
         "Research focus on vaccine development and immunological studies",
         "Utilizing cutting-edge molecular biology techniques in vaccine design"
       ]
