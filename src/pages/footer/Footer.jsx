@@ -82,7 +82,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="text-center mt-2 text-xs text-emerald-100 opacity-80"
         >
-          Biotechnology Researcher • Virology Enthusiast
+        
         </motion.div>
       </div>
     </footer>

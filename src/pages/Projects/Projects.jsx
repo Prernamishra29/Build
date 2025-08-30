@@ -55,7 +55,6 @@ const CertificatesSection = () => {
    
   title: "Is it somehow possible to improve human personality through genetics?",
   organizer: "Department of Biotechnology, Invertis University, Bareilly",
-  supervisor: "Associated with Invertis University",
   id: "Poster2019",
   date: "Oct 2019",
   description:
