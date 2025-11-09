@@ -98,7 +98,16 @@ const CertificatesSection = () => {
         "Published a paper introducing GenoVisor, a tool for DNA-to-protein conversion with integrated ExPASy ProtParam features for advanced bioinformatics analysis.",
       skills: ["Bioinformatics", "DNA Analysis", "Protein Modeling", "Tool Development"],
       link: "https://www.ijaresm.com/uploaded_files/document_file/Himanshu_Guptao5Ti.pdf"
-    }
+    },
+    {
+  title: "Targeting Inflammation in Atherosclerosis: Insights from Natural and Conventional Therapies",
+  publisher: "Journal of Population Therapeutics & Clinical Pharmacology",
+  date: "May 25, 2024",
+  description:
+    "Published a research paper exploring the mechanisms of inflammation in atherosclerosis and evaluating both natural and conventional therapeutic approaches for disease management.",
+  skills: ["Pharmacology", "Therapeutics", "Inflammation Biology", "Cardiovascular Research"],
+  link: "https://www.jptcp.com/index.php/jptcp/article/view/11616/10846" 
+},
   ];
 
   const Card = ({ item, type }) => (
